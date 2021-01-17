@@ -1,0 +1,60 @@
+좋은 코딩 습관이란?
+주석이 아닌 코드로 설명되는 명확한 코드
+가독성이 좋은 코드가 좋은 코드이다.
+1.함수는 명확한 파라미터 이름, 함수의 이름
+2.함수는 한가지 기능만 수행해야 한다.(modify부분)
+3.적절한 파라미터 인가 생각
+4.함수의 return이 명확한가?
+5.함수가 적절한 기능 단위로 분리되어 있는가?
+6.insert와 delete 같은 쌍이 있는가?
+7.꼭 필요한 곳에 주석 반드시 달기.
+
+서버에 필요한 함수
+/home에서 필요한 함수.
+1.투자 목록 쏴주는 함수.(PercentSend)
+2.투자 습관 쏴주는 함수.( HabitSend )
+
+/risky
+1.위험자산 가져오는 함수 (RiskySend)
+
+/riskymodify
+1.자산을 가져오는 함수(RiskyGet)
+2.자산 추가하는 함수(RiskyPlus)
+3.자산 수정하는 함수(RiskyUpdate)
+4.자산 삭제하는 함수(RiskyDelete)
+
+/risky/:자산이름
+1.위험자산 이름에 맞는 종목들 가져오는 함수(RiskyEventSend, 인자 : 자산이름(ex)한국주식))
+
+/riskymodify/:자산이름
+1.자산을 가져오는 함수(RiskyPropertyGet)
+2.자산 추가하는 함수(RiskyPropertyPlus)
+3.자산 수정하는 함수(RiskyPropertyUpdate)
+4.자산 삭제하는 함수(RiskyPropertyDelete)
+
+/risky/:자산이름/:종목이름
+1.종목 데이터를 가져오는 함수(RiskyEventGet, 인자 : 종목이름(ex)삼성전자))
+2.자산 추가하는 함수(RiskyEventPlus, 인자 : 종목이름(ex)삼성전자))
+3.자산 수정하는 함수(RiskyEventUpdate, 인자 : 종목이름(ex)삼성전자))
+4.자산 삭제하는 함수(RiskyEventDelete, 인자 : 종목이름(ex)삼성전자))
+
+/safe
+1.자산을 가져오는 함수(SafeSend)
+
+/safemodify
+1.자산을 가져오는 함수(SafeGet)
+2.자산 추가하는 함수(SafePlus)
+3.자산 수정하는 함수(SafeUpdate)
+4.자산 삭제하는 함수(SafeDelete)
+
+/safe/:자산이름
+1.자산을 가져오는 함수(SafeEventGet)
+2.자산 추가하는 함수(SafeEventPlus)
+3.자산 수정하는 함수(SafeEventUpdate)
+4.자산 삭제하는 함수(SafeEventDelete)
+
+/habitmodify
+1.자산을 가져오는 함수(HabitGet)
+2.자산 추가하는 함수(HabitPlus)
+3.자산 수정하는 함수(HabitUpdate)
+4.자산 삭제하는 함수(HabitDelete)
