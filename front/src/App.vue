@@ -1,17 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-link to="/home"></router-link>
+    <router-link to="/risky"></router-link>
+    <router-link to='/riskymodify'></router-link>
+    <router-link to="/risky/:eventname"></router-link>
+    <router-link to="/riskymodify/:eventname"></router-link>
+    <router-link to="/risky/:eventname/:categoryname"></router-link>
+    <router-link to='/safe'></router-link>
+    <router-link to="/safemodify"></router-link>
+    <router-link to='/safe/:eventname'></router-link>
+    <router-link to="/habitmodify"></router-link>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
   }
 }
 </script>
