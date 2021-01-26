@@ -58,3 +58,10 @@ app.post('/SafeEventDetailModify/:Eventname',(req,res)=>{
 app.listen(port, () => {
     console.log('success')
 })
+
+
+// CREATE TABLE RiskyList(
+//     -> id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+//     -> event VARCHAR(30) NOT NULL,
+//     -> money INT NOT NULL,
+//     -> detail VARCHAR(30) NOT NULL );

@@ -10,6 +10,7 @@ import safe from '../views/safe.vue'
 import safemodify from '../views/safemodify.vue'
 import safeeventname from '../views/safeeventname.vue'
 import habitmodify from '../views/habitmodify.vue'
+import store from '../store/index.js'
 
 
 
@@ -21,7 +22,8 @@ const routes = [
     name: 'home',
     component: home,
     beforeEnter: (to, from, next) => {
-
+      store.dispatch('HabitListAction')
+      store.dispatch('GetEventMoney')
       next()
     }
   },
@@ -30,6 +32,7 @@ const routes = [
     name: 'risky',
     component: risky,
     beforeEnter: (to, from, next) => {
+      store.dispatch('RiskyListAction')
       next()
     }
   },
@@ -38,6 +41,7 @@ const routes = [
     name: 'riskymodify',
     component: riskymodify,
     beforeEnter: (to, from, next) => {
+      store.dispatch('RiskyListAction')
       next()
     }
   },
@@ -46,6 +50,8 @@ const routes = [
     name: 'riskyeventname',
     component: riskyeventname,
     beforeEnter: (to, from, next) => {
+      var eventname = window.location.pathname.split('/')[2];
+      store.dispatch('RiskyEventLIstAction',eventname)
       next()
     }
   },
@@ -54,6 +60,8 @@ const routes = [
     name: 'riskymodifyeventname',
     component: riskymodifyeventname,
     beforeEnter: (to, from, next) => {
+      var eventname = window.location.pathname.split('/')[2];
+      store.dispatch('RiskyEventLIstAction',eventname)
       next()
     }
   },
@@ -62,6 +70,9 @@ const routes = [
     name: 'riskyeventnamecategoryname',
     component: riskyeventnamecategoryname,
     beforeEnter: (to, from, next) => {
+      var eventname = window.location.pathname.split('/')[2];
+      var categoryname = window.location.pathname.split('/')[3];
+      store.dispatch('RiskyEventDetailAction',eventname,categoryname)
 
       next()
     }
@@ -71,6 +82,7 @@ const routes = [
     name: 'safe',
     component: safe,
     beforeEnter: (to, from, next) => {
+      store.dispatch('SafeListAction')
       next()
     }
   },
@@ -79,6 +91,7 @@ const routes = [
     name: 'safemodify',
     component: safemodify,
     beforeEnter: (to, from, next) => {
+      store.dispatch('SafeListAction')
       next()
     }
   },
@@ -87,6 +100,8 @@ const routes = [
     name: 'safeeventname',
     component: safeeventname,
     beforeEnter: (to, from, next) => {
+      var eventname = window.location.pathname.split('/')[2]
+      store.dispatch('SafeEventDetailMutation',eventname)
       next()
     }
   },
@@ -95,6 +110,7 @@ const routes = [
     name: 'habitmodify',
     component: habitmodify,
     beforeEnter: (to, from, next) => {
+      store.dispatch('HabitListAction');
       next()
     }
   }

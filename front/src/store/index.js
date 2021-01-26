@@ -1,6 +1,6 @@
 import Vuex from "vuex"
 import Vue from 'vue'
-// import axios from 'axios'
+import axios from 'axios'
 
 Vue.use(Vuex)
 
@@ -35,48 +35,48 @@ const store = new Vuex.Store({
 
     },
     actions:{
-      // HabitListAction({commit}){
-      //   // axios.get('http://localhost:3000/HabitListSend')
-      //   // .then((res)=>{
-      //   //   console.log(res.data)
-      //   //   commit('HabitListMutaion',res.data)
-      //   // });
-      // },
-      // RiskyListAction({commit}){
-      //   // axios.get('http://localhost:3000/RiskyListSend')
-      //   // .then((res)=>{
-      //   //   console.log(res.data)
-      //   //   commit('RiskyListMutation',res.data)
-      //   // });
-      // },
-      // RiskyEventLIstAction({commit},EventName){
-      //   // axios.get('http://localhost:3000/RiskyEventLIstSend/:EventName')
-      //   // .then((res)=>{
-      //   //   console.log(res.data)
-      //   //   commit('RiskyEventLIstMutation',res.data)
-      //   // });
-      // },
-      // RiskyEventDetailAction({commit},EventName,categoryname){
-      //   // axios.get('http://localhost:3000/RiskyEventDetailSend/:EventName/:categoryname')
-      //   // .then((res)=>{
-      //   //   console.log(res.data)
-      //   //   commit('RiskyEventDetailMutation',res.data)
-      //   // });
-      // },
-      // SafeListAction({commit}){
-      //   // axios.get('http://localhost:3000/SafeListSend')
-      //   // .then((res)=>{
-      //   //   console.log(res.data)
-      //   //   commit('SafeListMutation',res.data)
-      //   // });
-      // },
-      // SafeEventDetailMutation({commit},Eventname){
-      //   // axios.get('http://localhost:3000/SafeEventDetailSend/:Eventname')
-      //   // .then((res)=>{
-      //   //   console.log(res.data)
-      //   //   commit('SafeEventDetailMutation',res.data)
-      //   // });
-      // }
+      HabitListAction({commit}){
+        axios.get('http://localhost:3000/HabitListSend')
+        .then((res)=>{
+          console.log(res.data)
+          commit('HabitListMutaion',res.data)
+        });
+      },
+      RiskyListAction({commit}){
+        axios.get('http://localhost:3000/RiskyListSend')
+        .then((res)=>{
+          console.log(res.data)
+          commit('RiskyListMutation',res.data)
+        });
+      },
+      RiskyEventLIstAction({commit},EventName){
+        axios.get(`http://localhost:3000/RiskyEventLIstSend/:${EventName}`)
+        .then((res)=>{
+          console.log(res.data)
+          commit('RiskyEventLIstMutation',res.data)
+        });
+      },
+      RiskyEventDetailAction({commit},EventName,categoryname){
+        axios.get(`http://localhost:3000/RiskyEventDetailSend/:${EventName}/:${categoryname}`)
+        .then((res)=>{
+          console.log(res.data)
+          commit('RiskyEventDetailMutation',res.data)
+        });
+      },
+      SafeListAction({commit}){
+        axios.get('http://localhost:3000/SafeListSend')
+        .then((res)=>{
+          console.log(res.data)
+          commit('SafeListMutation',res.data)
+        });
+      },
+      SafeEventDetailMutation({commit},Eventname){
+        axios.get(`http://localhost:3000/SafeEventDetailSend/:${Eventname}`)
+        .then((res)=>{
+          console.log(res.data)
+          commit('SafeEventDetailMutation',res.data)
+        });
+      }
     },
     modules:{
 
