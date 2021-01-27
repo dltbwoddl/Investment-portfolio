@@ -11,7 +11,8 @@ const store = new Vuex.Store({
       RiskyEventLIst : new Array(),
       SRiskyEventDetail : new Object(),
       SafeList : new Array(),
-      SafeEventDetail : new Object()
+      SafeEventDetail : new Object(),
+      TotalEventMoney : new Array()
     },
     mutations: {
       HabitListMutaion(state,data){
@@ -32,6 +33,9 @@ const store = new Vuex.Store({
       SafeEventDetailMutation(state,data){
         return state.SafeEventDetail=data
       },
+      TotalEventMoneyMutation(state,data){
+        return state.TotalEventMoney=data
+      }
 
     },
     actions:{
@@ -70,11 +74,18 @@ const store = new Vuex.Store({
           commit('SafeListMutation',res.data)
         });
       },
-      SafeEventDetailMutation({commit},Eventname){
+      SafeEventDetailAction({commit},Eventname){
         axios.get(`http://localhost:3000/SafeEventDetailSend/:${Eventname}`)
         .then((res)=>{
           console.log(res.data)
           commit('SafeEventDetailMutation',res.data)
+        });
+      },
+      TotalEventMoneyAction({commit}){
+        axios.get(`http://localhost:3000/TotalEventMoneySend`)
+        .then((res)=>{
+          console.log(res.data)
+          commit('TotalEventMoneyMutation',res.data)
         });
       }
     },

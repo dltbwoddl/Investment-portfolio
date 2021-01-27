@@ -7,6 +7,10 @@ app.use(bodyParser.json())
 app.use(cors())
 const port = 3000;
 
+app.get('/TotalEventMoneySend',(req,res)=>{
+
+});
+
 app.get('/HabitListSend',(req,res)=>{
 
 });
@@ -54,7 +58,6 @@ app.post('/SafeListModify',(req,res)=>{
 app.post('/SafeEventDetailModify/:Eventname',(req,res)=>{
     
 });
-
 app.listen(port, () => {
     console.log('success')
 })
