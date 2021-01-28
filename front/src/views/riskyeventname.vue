@@ -1,5 +1,10 @@
 <template>
-    <div>1<GrayB></GrayB><BlackB></BlackB></div>
+    <div>
+        <div v-for="RiskyEvent in RiskyEventLIst" v-bind:key="RiskyEvent.id">
+            <GrayB v-bind:eventname="RiskyEvent.event"></GrayB>
+        </div>
+            <BlackB v-bind:modify="modifyname"></BlackB>
+        </div>
 
 </template>
 
@@ -7,7 +12,12 @@
 export default {
     components:{
     },
-  computed:{
+    data: function () {
+        return { 
+            modifyname : '개별 종목 수정'
+        }
+    },
+    computed:{
         RiskyEventLIst: function(){
             return this.$store.state.RiskyEventLIst;
         }

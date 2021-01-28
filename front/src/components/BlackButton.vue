@@ -1,10 +1,10 @@
 <template>
-  <div>1</div>
+  <div>{{modify}}</div>
 </template>
 
 <script>
 export default {
-
+  props : ['modify']
 }
 </script>
 

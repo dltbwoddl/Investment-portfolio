@@ -1,5 +1,8 @@
 <template>
-    <div>1<DetailT></DetailT></div>
+    <div><DetailT 
+            v-bind:name ="RiskyEventDetail.event" 
+            :money ='RiskyEventDetail.money'
+            :des ='RiskyEventDetail.detail' ></DetailT></div>
 
 </template>
 

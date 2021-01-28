@@ -1,6 +1,7 @@
 <template>
-  <div>  <ModifyB></ModifyB>
-  <Plusb></Plusb>
+  <div>  
+    <ModifyB></ModifyB>
+    <Plusb></Plusb>
 </div>
 </template>
 
