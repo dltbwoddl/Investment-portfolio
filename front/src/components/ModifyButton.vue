@@ -4,7 +4,7 @@
 
 <script>
 export default {
-
+  props:['id', 'event']
 }
 </script>
 

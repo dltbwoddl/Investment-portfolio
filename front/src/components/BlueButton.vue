@@ -1,5 +1,5 @@
 <template>
-  <div>{{name}}</div>
+  <div><b-button variant="outline-primary">{{name}}</b-button></div>
 </template>
 
 <script>

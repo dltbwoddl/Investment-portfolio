@@ -1,5 +1,5 @@
 <template>
-  <div>{{modify}}</div>
+  <div><b-button variant="dark">{{modify}}</b-button></div>
 </template>
 
 <script>

@@ -1,5 +1,6 @@
 <template>
     <div>
+        <BackB v-bind:url="url"></BackB>
         <div v-for="eventname in RiskyList" v-bind:key="eventname.id">
            <GrayB v-bind:eventname="eventname.event"></GrayB>     
         </div>
@@ -15,7 +16,8 @@ export default {
 
     },
     data: function () {
-        return { 
+        return {
+            url:'url', 
             modifyname : '위험 자산 수정'
         }
     },

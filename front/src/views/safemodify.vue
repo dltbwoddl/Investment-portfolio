@@ -1,5 +1,11 @@
 <template>
-    <div>1<ModifyB></ModifyB><Plusb></Plusb></div>
+    <div>
+        <BackB v-bind:url="url"></BackB>
+        <div v-for="safe in SafeList" v-bind:key="safe.id">
+            <ModifyB v-bind:id="safe.id" :event="safe.event"></ModifyB>
+        </div>   
+        <Plusb></Plusb>
+    </div>
 
 </template>
 
@@ -7,6 +13,11 @@
 export default {
     components:{
 
+    },
+    data: function () {
+        return { 
+            url:'url'
+        }
     },
     computed:{
         SafeList: function(){
