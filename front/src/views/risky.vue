@@ -5,7 +5,7 @@
            <GrayB v-bind:eventname="eventname.event"></GrayB>     
         </div>
         
-        <BlackB v-bind:modify='modifyname'></BlackB>
+        <BlackB v-bind:modify='modifyname' :url='modifyurl'></BlackB>
     </div>
 
 </template>
@@ -18,7 +18,8 @@ export default {
     data: function () {
         return {
             url:'url', 
-            modifyname : '위험 자산 수정'
+            modifyname : '위험 자산 수정',
+            modifyurl : '/riskymodify'
         }
     },
     computed:{

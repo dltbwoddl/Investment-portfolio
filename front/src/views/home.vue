@@ -2,9 +2,9 @@
     <div>
         <BackB v-bind:url="url"></BackB>
         <div v-for="value in BigCategory" v-bind:key='value'>
-            <BlueB v-bind:name="value"></BlueB>
+            <BlueB v-bind:name="value" :url="value"></BlueB>
         </div>
-        <BlackB v-bind:modify="modifyname"></BlackB>
+        <BlackB v-bind:modify="modifyname" :url="modifyurl"></BlackB>
     </div>
 </template>
 
@@ -16,9 +16,10 @@ export default {
     },
       data: function () {
      return { 
-       BigCategory : ['위험자산', '안전자산'],
+       BigCategory : ['risky', 'safe'],
        modifyname : '투자 습관 수정',
-       url:'url'
+       url:'url',
+       modifyurl : '/habitmodify'
 
     }
   },

@@ -4,7 +4,7 @@
         <div v-for="event in SafeList" v-bind:key="event.id">
             <GrayB v-bind:eventname="event.event"></GrayB>
         </div>
-        <BlackB v-bind:modify="modifyname"></BlackB>
+        <BlackB v-bind:modify="modifyname" :url='modifyurl'></BlackB>
     </div>
 
 </template>
@@ -16,7 +16,8 @@ export default {
     data: function () {
         return { 
             modifyname : '안전 자산 수정',
-            url : 'url'
+            url : 'url',
+            modifyurl : '/safemodify'
         }
     },
     computed:{

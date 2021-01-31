@@ -1,10 +1,10 @@
 <template>
-  <div><b-button variant="dark">{{modify}}</b-button></div>
+  <div><b-button variant="dark" :href="url">{{modify}}</b-button></div>
 </template>
 
 <script>
 export default {
-  props : ['modify']
+  props : ['modify', 'url']
 }
 </script>
 
