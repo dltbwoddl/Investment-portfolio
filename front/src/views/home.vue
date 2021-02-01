@@ -16,7 +16,7 @@ export default {
     },
       data: function () {
      return { 
-       BigCategory : ['risky', 'safe'],
+       BigCategory : ['risky', 'safe','hi'],
        modifyname : '투자 습관 수정',
        url:'url',
        modifyurl : '/habitmodify'
