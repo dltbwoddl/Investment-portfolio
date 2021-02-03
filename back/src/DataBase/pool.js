@@ -10,7 +10,7 @@ const DB_info ={
     host: 'localhost',
     user: 'root',
     password: '123456',
-    database: 'investuser',
+    database: 'investdb',
     multipleStatements : true,
     connectionLimit:5,
     waitForConnections:false

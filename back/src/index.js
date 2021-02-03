@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors')
 const bodyParser = require("body-parser")
+const GetData = require('./DataBase/GetData')
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(cors())
@@ -12,7 +13,7 @@ app.get('/TotalEventMoneySend',(req,res)=>{
 });
 
 app.get('/HabitListSend',(req,res)=>{
-
+    GetData.HRSListGet(req, res, 'SELECT habit FROM habitlist')
 });
 
 app.get('/RiskyListSend',(req,res)=>{
