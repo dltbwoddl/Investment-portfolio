@@ -17,7 +17,7 @@ app.get('/HabitListSend',(req,res)=>{
 });
 
 app.get('/RiskyListSend',(req,res)=>{
-
+    GetData.HRSListGet(req,res,'SELECT event FROM riskylist');
 });
 
 app.get('/RiskyEventLIstSend/:EventName',(req,res)=>{
