@@ -1,6 +1,6 @@
 <template>
   <div>
-    {{eventname}}
+    <b-button variant="outline-info">{{eventname}}</b-button>
   </div>
 </template>
 
