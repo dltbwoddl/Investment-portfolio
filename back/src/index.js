@@ -21,7 +21,9 @@ app.get('/RiskyListSend',(req,res)=>{
 });
 
 app.get('/RiskyEventLIstSend/:EventName',(req,res)=>{
-
+    eventname = req.params.EventName;
+    console.log(eventname)
+    GetData.RiskyEventGet(req,res,eventname.substring(1,))
 });
 
 app.get('/RiskyEventDetailSend/:EventName/:categoryname',(req,res)=>{

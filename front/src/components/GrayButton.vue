@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-button variant="outline-info">{{eventname}}</b-button>
+    <b-button variant="outline-info" :href="`risky/${eventname}`">{{eventname}}</b-button>
   </div>
 </template>
 

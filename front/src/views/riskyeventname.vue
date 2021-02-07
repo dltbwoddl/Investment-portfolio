@@ -15,7 +15,7 @@ export default {
     },
     data: function () {
         return { 
-            url:'url', 
+            url:'/risky', 
             modifyname : '개별 종목 수정'
         }
     },

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-icon icon="arrow-left-square-fill" :href='url'></b-icon>
+        <b-button :href='url'><b-icon icon="arrow-left-square-fill" ></b-icon></b-button>
     </div>
 </template>
 

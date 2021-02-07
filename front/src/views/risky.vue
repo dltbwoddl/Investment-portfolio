@@ -17,7 +17,7 @@ export default {
     },
     data: function () {
         return {
-            url:'url', 
+            url:'/home', 
             modifyname : '위험 자산 수정',
             modifyurl : '/riskymodify'
         }
