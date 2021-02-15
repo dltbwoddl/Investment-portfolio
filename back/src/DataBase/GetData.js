@@ -26,15 +26,15 @@ module.exports = {
             }).then(ret => {
                 pool_1.end();
             })
-                .catch(err => {
-                    conn.queryAsync(`CREATE TABLE ${EventName}(
-                            id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-                            event VARCHAR(30) NOT NULL,
-                            money INT NOT NULL,
-                            detail VARCHAR(30) NOT NULL );`).then(() => {
-                        pool_1.end();
-                    })
-                })
+                // .catch(err => {
+                //     conn.queryAsync(`CREATE TABLE ${EventName}(
+                //             id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                //             event VARCHAR(30) NOT NULL,
+                //             money INT NOT NULL,
+                //             detail VARCHAR(30) NOT NULL );`).then(() => {
+                //         pool_1.end();
+                //     })
+                // })
         })
     },
 

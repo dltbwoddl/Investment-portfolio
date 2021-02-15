@@ -16,7 +16,7 @@ export default {
     },
     data: function () {
         return { 
-            url:'url'
+            url:'./risky'
         }
     },
     computed:{

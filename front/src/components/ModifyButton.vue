@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div>
+    <input type="text" :value="`${event}`" :name="`${id}`">
+  </div>
 </template>
 
 <script>

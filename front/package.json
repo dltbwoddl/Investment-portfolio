@@ -11,6 +11,9 @@
     "axios": "^0.21.1",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.6.5",
+    "expose-loader": "^2.0.0",
+    "jQuery": "^1.7.4",
+    "jquery": "^3.5.1",
     "vue": "^2.6.11",
     "vue-router": "^3.4.9",
     "vuex": "^3.6.0"

@@ -3,6 +3,7 @@ const app = express();
 const cors = require('cors')
 const bodyParser = require("body-parser")
 const GetData = require('./DataBase/GetData')
+const Modify = require('./DataBase/Modify')
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(cors())
@@ -13,11 +14,11 @@ app.get('/TotalEventMoneySend',(req,res)=>{
 });
 
 app.get('/HabitListSend',(req,res)=>{
-    GetData.HRSListGet(req, res, 'SELECT habit FROM habitlist')
+    GetData.HRSListGet(req, res, 'SELECT * FROM habitlist')
 });
 
 app.get('/RiskyListSend',(req,res)=>{
-    GetData.HRSListGet(req,res,'SELECT event FROM riskylist');
+    GetData.HRSListGet(req,res,'SELECT * FROM riskylist');
 });
 
 app.get('/RiskyEventLIstSend/:EventName',(req,res)=>{
@@ -39,7 +40,7 @@ app.get('/SafeEventDetailSend/:Eventname',(req,res)=>{
 });
 
 app.post('/HabitListModify',(req,res)=>{
-
+    Modify.HabitListModify(req,res)
 });
 
 app.post('/RiskyListMoodify',(req,res)=>{

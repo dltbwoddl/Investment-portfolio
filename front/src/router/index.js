@@ -23,7 +23,6 @@ const routes = [
     component: home,
     beforeEnter: (to, from, next) => {
       store.dispatch('HabitListAction')
-      store.dispatch('RiskyEventLIstAction')
       next()
     }
   },
