@@ -40,6 +40,7 @@ app.get('/SafeEventDetailSend/:Eventname',(req,res)=>{
 });
 
 app.post('/HabitListModify',(req,res)=>{
+    console.log(100)
     Modify.HabitListModify(req,res)
 });
 
