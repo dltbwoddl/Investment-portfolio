@@ -43,6 +43,12 @@ const store = new Vuex.Store({
         axios.get('http://localhost:3000/HabitListSend')
         .then((res)=>{
           console.log(res.data)
+          if(res.data.length==0){
+            res.data = new Array({
+              id : 1,
+              habit :''
+            })
+          }
           commit('HabitListMutaion',res.data)
         });
       },
